@@ -1,5 +1,14 @@
 # Installation
+## 사전 준비
+아래의 명령어를 실행하여 ssl_keyfile 의 권한을 수정한다.
+```
+$ cd docker/keyfile
+$ chmod 600 ssl_key
+```
+
+## docker 실행
 아래의 명령어를 실행하여 Docker Image 를 설치한다.
+> Docker Image 최초 설치 시에 Replica 설정으로 인하여 설치 후 약 1분간 대기 후 테스트 진행할 것
 ```
 $ cd docker
 $ docker-compose up -d
