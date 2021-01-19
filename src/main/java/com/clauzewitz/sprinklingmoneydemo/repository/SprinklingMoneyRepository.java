@@ -12,4 +12,6 @@ public interface SprinklingMoneyRepository extends MongoRepository<SprinklingMon
     public SprinklingMoney findOneByToken(String token);
     @Cacheable(value = CacheProperties.NAME, key = "#token", unless = "#result == null")
     public SprinklingMoney findOneByTokenAndRoomId(String token, String roomId);
+    public SprinklingMoney findByRoomId(String roomId);
+    public SprinklingMoney removeAllByRoomId(String roomId);
 }
