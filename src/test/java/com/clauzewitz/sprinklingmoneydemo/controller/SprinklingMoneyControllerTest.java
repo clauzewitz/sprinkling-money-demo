@@ -89,6 +89,8 @@ class SprinklingMoneyControllerTest {
     })
     @DisplayName("02. 뿌리기 등록 테스트")
     public void testRecieveSprinklingMoney(String ownerId, String userId, String roomId, double amount, int memberCnt, int httpStatus) throws Exception {
+        sprinklingMoneyRepository.removeAllByRoomId(roomId);
+        
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.set("X-USER-ID", ownerId);
@@ -129,6 +131,8 @@ class SprinklingMoneyControllerTest {
     })
     @DisplayName("03. 뿌리기 내용 조회 테스트")
     public void testGetSprinklingMoney(String ownerId, String userId, String roomId, double amount, int memberCnt, int httpStatus) throws Exception {
+        sprinklingMoneyRepository.removeAllByRoomId(roomId);
+        
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.set("X-USER-ID", ownerId);
