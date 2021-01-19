@@ -1,4 +1,12 @@
 # Installation
+## 사전 준비
+아래의 명령어를 실행하여 ssl_keyfile 의 권한을 수정한다.
+```
+$ cd docker/keyfile
+$ chmod 600 ssl_key
+```
+
+## docker 실행
 아래의 명령어를 실행하여 Docker Image 를 설치한다.
 ```
 $ cd docker
