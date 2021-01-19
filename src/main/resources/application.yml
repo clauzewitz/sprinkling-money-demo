@@ -1,0 +1,53 @@
+server:
+  port: 8080
+
+# development properties
+spring:
+  config:
+    activate:
+      on-profile: dev
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017,localhost:27018
+      database: demo
+      userName: demoUser
+      password: demoUser
+      auto-index-creation: true
+    redis:
+      host: 127.0.0.1
+      port: 6379
+---
+
+# production properties
+spring:
+  config:
+    activate:
+      on-profile: prod
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017,localhost:27018
+      database: demo
+      userName: demoUser
+      password: demoUser
+      auto-index-creation: true
+    redis:
+      host: 127.0.0.1
+      port: 6379
+---
+
+# production properties
+spring:
+  config:
+    activate:
+      on-profile: test
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017,localhost:27018
+      database: demo
+      userName: demoUser
+      password: demoUser
+      auto-index-creation: true
+    redis:
+      host: 127.0.0.1
+      port: 6379
+---
