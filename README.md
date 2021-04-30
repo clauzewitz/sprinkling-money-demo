@@ -18,7 +18,7 @@ $ docker-compose up -d
 아래의 명령어를 실행하여 Docker Image 를 생성 및 실행한다.
 ```
 $ docker build --tag sprinkling-money-demo:0.0.1 .
-$ docker run sprinkling-money-demo:0.0.1
+$ docker run -d -p 8080:8080 --name sprinkling-money-demo sprinkling-money-demo:0.0.1
 ```
 
 # API Docs
